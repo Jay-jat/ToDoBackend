@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Todo</title>
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <div class="edit-container">
+      <div class="edit-top-bar">
+        <h1 class="edit-title">Edit Todo</h1>
+        <a href="/" class="btn back-btn">← Back</a>
+      </div>
+
+      <div class="edit-card">
+        <form
+          class="edit-form"
+          action="/todo/<%= todo.id %>?_method=PUT"
+          method="POST"
+        >
+          <label class="input-label">Update Todo Title</label>
+
+          <input
+            type="text"
+            name="title"
+            value="<%= todo.title %>"
+            class="edit-input"
+            required
+          />
+
+          <button class="btn update-submit-btn">Update Todo</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

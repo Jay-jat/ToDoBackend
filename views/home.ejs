@@ -15,13 +15,19 @@
         <a href="/new" class="btn add-btn">+ Add Todo</a>
       </div>
 
-    <ul class="todo-list">
+   <ul class="todo-list">
     <% todos.forEach(todo => { %>
         <li class="todo-item">
             <span class="todo-text"><%= todo.title %></span>
+
+            <form action="/todo/<%= todo.id %>?_method=DELETE" method="POST">
+                <a class="edit-btn" href="/todo/<%= todo.id %>/edit">Edit</a>
+                <button class="delete-btn">Delete</button>
+            </form>
         </li>
     <% }) %>
 </ul>
+
 
     </div>
   </body>
