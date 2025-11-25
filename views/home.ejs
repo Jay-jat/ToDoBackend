@@ -15,17 +15,14 @@
         <a href="/new" class="btn add-btn">+ Add Todo</a>
       </div>
 
-      <ul class="todo-list">
+    <ul class="todo-list">
+    <% todos.forEach(todo => { %>
         <li class="todo-item">
-          <span class="todo-text"></span>
-          <a href="#" class="btn edit-btn">Edit</a>
+            <span class="todo-text"><%= todo.title %></span>
         </li>
+    <% }) %>
+</ul>
 
-        <li class="todo-item">
-          <span class="todo-text"></span>
-          <a href="#" class="btn edit-btn">Edit</a>
-        </li>
-      </ul>
     </div>
   </body>
 </html>
